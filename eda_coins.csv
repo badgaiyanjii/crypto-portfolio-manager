@@ -1,0 +1,11 @@
+coin_id,symbol,name,current_price,market_cap
+bitcoin,btc,Bitcoin,71291,1425774534723
+ethereum,eth,Ethereum,2095.27,252907554935
+binancecoin,bnb,BNB,660.71,90099313752
+ripple,xrp,XRP,1.41,86604639642
+solana,sol,Solana,88.52,50553494607
+tron,trx,TRON,0.28932,27411965914
+dogecoin,doge,Dogecoin,0.096446,14793464585
+cardano,ada,Cardano,0.272065,10021280786
+litecoin,ltc,Litecoin,55.07,4236990254
+polkadot,dot,Polkadot,1.52,2538734745

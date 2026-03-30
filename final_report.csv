@@ -1,0 +1,5 @@
+coin_id,risk_score,risk_level
+bitcoin,0.26,LOW
+ethereum,0.21,LOW
+solana,0.96,HIGH
+cardano,0.55,MEDIUM

@@ -1,0 +1,11 @@
+coin_id,mean_return,volatility,sharpe_ratio,risk_score,risk_level
+binancecoin,0.00074,0.02763,0.02,2.76,MEDIUM
+bitcoin,-8e-05,0.02316,-0.01,2.32,MEDIUM
+cardano,-0.0017,0.04221,-0.04,4.22,MEDIUM
+dogecoin,-0.00038,0.04688,-0.01,4.69,MEDIUM
+ethereum,0.00108,0.03923,0.03,3.92,MEDIUM
+litecoin,-0.0006,0.03672,-0.02,3.67,MEDIUM
+polkadot,-0.00158,0.04645,-0.04,4.65,MEDIUM
+ripple,-0.00054,0.03844,-0.02,3.84,MEDIUM
+solana,-8e-05,0.0407,-0.0,4.07,MEDIUM
+tron,0.00083,0.01675,0.04,1.68,LOW
