@@ -1,165 +1,239 @@
-# 🚀 Crypto Portfolio Management System
-
-## 📌 Project Overview
-The Crypto Portfolio Management System is an end-to-end application designed to help users make informed investment decisions in the cryptocurrency market. 
-
-The system integrates data analysis, risk assessment, portfolio optimization, and machine learning-based price prediction into a single interactive dashboard.
+# 🚀 Crypto Portfolio Manager  
+### End-to-End Financial Analytics & Investment Intelligence System
 
 ---
 
-## 🎯 Objectives
+## 📌 Overview
 
-- Analyze cryptocurrency risk using historical data
-- Classify assets into Low, Medium, and High risk categories
-- Generate optimized portfolio allocation based on user risk preference
-- Visualize crypto price trends using interactive graphs
-- Predict future prices using machine learning
-- Store and retrieve reports using database
+The Crypto Portfolio Manager is a full-stack cryptocurrency analytics system that simulates real-world quantitative finance platforms.
+
+It integrates data pipelines, risk analysis, portfolio optimization, machine learning predictions, and an interactive dashboard into one unified application.
 
 ---
 
-## 🧩 System Architecture
-User Interface (Frontend - Streamlit)
-↓
-Backend Processing (Python Modules)
-↓
-Data Layer (CSV + SQLite Database)
+## 🔄 Complete Data Pipeline
+
+API Ingestion → Data Storage → Historical Processing → Risk Engine → Parallel Computation → Portfolio Allocation → AI Prediction → Dashboard Visualization → PDF Reporting
 
 ---
 
-## ⚙️ Modules Description
+## 🧠 System Architecture
 
-### 🔹 1. Data Collection & Processing
-- Fetches and processes cryptocurrency historical data
-- Cleans and prepares data for analysis
-
-### 🔹 2. Risk Analysis Engine
-- Calculates:
-  - Daily Returns
-  - Volatility
-  - Risk Score
-- Classifies coins into:
-  - LOW Risk
-  - MEDIUM Risk
-  - HIGH Risk
+Presentation Layer (Streamlit UI, Auth, Alerts)
+        ↓
+Analytics Layer (Risk Engine + ML Models)
+        ↓
+Data Layer (CoinGecko API + Yahoo Finance)
+        ↓
+Storage Layer (SQLite + CSV Files)
 
 ---
 
-### 🔹 3. Portfolio Allocation Module
-- Uses risk-based allocation strategy
-- Distributes investment based on user profile:
-  - Low Risk Investor
-  - Medium Risk Investor
-  - High Risk Investor
+## 📂 Project Structure
+
+CRYPTO-PORTFOLIO-MANAGER/
+
+app.py  
+database_manager.py  
+notifications.py  
+predictor.py  
+styles.py  
+requirements.txt  
+.env.example  
+README.md  
+LICENSE  
+
+core/  
+  collect_data.py  
+  fetch_historical.py  
+  investment_mix_calculator.py  
+  parallel_risk.py  
+  risk_engine.py  
+  test_investment_mix.py  
+
+data/  
+  crypto.db  
+  historical_prices.csv  
+  eda_coins.csv  
+  market_snapshot.csv  
+
+docs/  
+  reports & diagrams  
 
 ---
 
-### 🔹 4. Machine Learning Prediction
-- Uses Linear Regression model
-- Predicts next-day cryptocurrency prices
-- Based on historical trends
+## ⚙️ Core Modules
 
----
+### Data Ingestion Layer
+- Fetches live crypto data from APIs
+- Stores structured data in CSV and SQLite
 
-### 🔹 5. Interactive Dashboard (Frontend)
-Built using Streamlit:
-- Portfolio allocation visualization
-- Risk analysis graphs
-- Crypto trend charts
-- Price prediction interface
+### Historical Data Processing
+- Downloads 1-year OHLCV data
+- Maps crypto IDs to trading symbols
 
----
+### Risk Analytics Engine
+- Calculates daily returns and volatility
+- Generates risk scores
+- Classifies assets into Low, Medium, High risk
 
-### 🔹 6. Database Integration
-- Stores reports in SQLite database
-- Allows retrieval of previous analysis
+### Parallel Computation
+- Multithreaded processing for faster analysis
+
+### Portfolio Allocation
+- Risk-based investment allocation
+- Supports Low, Medium, High risk strategies
+
+### Machine Learning Prediction
+- Linear Regression model
+- Predicts next 7-day price trend
+
+### Dashboard (Frontend)
+- Portfolio visualization
+- Risk charts
+- Market trends
+- Prediction output
+- PDF reports
+
+### Database & Authentication
+- SQLite database with WAL mode
+- Thread-safe operations
+- OTP-based login system
+- SHA-256 password hashing
+
+### Notifications System
+- Email alerts
+- OTP verification
+- PDF report generation
 
 ---
 
 ## 📊 Key Features
 
-✔ Risk Classification (Low / Medium / High)  
-✔ Portfolio Optimization  
-✔ Interactive Visualizations (Plotly)  
-✔ Machine Learning Prediction  
-✔ Real-time Dashboard Interface  
-✔ Database Storage  
+✔ Real-time crypto analysis  
+✔ Risk classification system  
+✔ Portfolio optimization  
+✔ Multithreaded computation  
+✔ Machine learning predictions  
+✔ Secure authentication  
+✔ Email alerts  
+✔ PDF reporting  
+✔ Interactive dashboard  
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Category        | Technology Used |
-|----------------|---------------|
-| Language       | Python        |
-| Data Analysis  | Pandas, NumPy |
-| Visualization  | Matplotlib, Plotly |
-| ML Model       | Scikit-learn  |
-| Frontend       | Streamlit     |
-| Database       | SQLite        |
+Language: Python  
+Data: Pandas, NumPy  
+Visualization: Plotly, Matplotlib  
+Machine Learning: Scikit-learn  
+Frontend: Streamlit  
+Database: SQLite  
+APIs: CoinGecko, Yahoo Finance  
 
 ---
 
-## 📂 Project Structure
-crypto-portfolio-manager
+## ▶️ How to Run
 
-├── backend/
-├── frontend/
-├── data/
-├── docs/
-├── README.md
-├── LICENSE
-├── requirements.txt
+Step 1: Clone repository
+git clone https://github.com/your-username/crypto-portfolio-manager.git
+cd crypto-portfolio-manager
 
+Step 2: Create virtual environment
+python -m venv venv
 
----
+Activate:
+Windows → venv\Scripts\activate  
+Mac/Linux → source venv/bin/activate  
 
-## ▶️ How to Run the Project
-
+Step 3: Install dependencies
 pip install -r requirements.txt
-python backend/run_risk_pipeline.py
-streamlit run frontend/dashboard.py
 
+Step 4: Setup environment variables
+copy .env.example .env
 
-----
-📈 Sample Outputs
-Risk Analysis Report
-Portfolio Allocation Chart
-Crypto Price Trends
-Predicted Price Output
+Add credentials:
+EMAIL_USER=your-email@gmail.com  
+EMAIL_PASS=your-app-password  
 
------
-🧠 Agile Methodology
+Step 5: Run data pipeline
+python core/collect_data.py  
+python core/fetch_historical.py  
 
-This project follows Agile practices:
+Step 6: Launch dashboard
+streamlit run app.py  
 
-Sprint-based development
-Modular design
-Incremental feature addition
-📌 Sprints:
-Sprint 1: Data Collection
-Sprint 2: Risk Analysis
-Sprint 3: Dashboard Development
-Sprint 4: ML Integration & Testing
-----
-🔐 License
+---
+
+## 🔐 Environment Variables
+
+EMAIL_USER → Sender email  
+EMAIL_PASS → App password  
+SMTP_SERVER → SMTP server  
+SMTP_PORT → Port number  
+
+Note: .env file is not uploaded to GitHub for security.
+
+---
+
+## 📈 Data Flow
+
+API → CSV/Database → Risk Engine → Parallel Compute → Portfolio Allocation → ML Prediction → Dashboard
+
+---
+
+## 💡 Features Implemented
+
+- OTP Authentication  
+- Secure password hashing  
+- API data integration  
+- Historical analysis  
+- Risk engine  
+- Portfolio allocation  
+- ML prediction  
+- Email alerts  
+- PDF reports  
+
+---
+
+## 🚀 Future Enhancements
+
+- Sharpe Ratio  
+- Monte Carlo Simulation  
+- Real-time data streaming  
+- Cloud deployment  
+- REST API  
+- Advanced ML models  
+
+---
+
+## 📚 Project Scope
+
+This project demonstrates:
+
+- Data engineering  
+- Financial analytics  
+- Risk modeling  
+- Parallel computing  
+- Portfolio optimization  
+- Dashboard development  
+- Machine learning  
+
+---
+
+## 👩‍💻 Author
+
+Aanya Badgaiyan  
+
+---
+
+## ⚖️ License
 
 This project is licensed under the MIT License.
+
 ---
-👩‍💻 Author
 
-Aanya Badgaiyan
------
+## ⭐ Final Note
 
-💡 Future Enhancements
-Live crypto API integration
-Advanced ML models (LSTM, ARIMA)
-Real-time portfolio tracking
-User authentication system
-Cloud deployment
-
------
-⭐ Conclusion
-
-This system provides a complete solution for cryptocurrency investment analysis by combining financial analytics, machine learning, and interactive visualization in a single platform.
-
+This project simulates a real-world crypto investment platform combining analytics, AI, and visualization into one system.
